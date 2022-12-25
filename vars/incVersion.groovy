@@ -3,7 +3,7 @@ def String call( Map config=[:] ) {
   def versionParts = config.version.tokenize('.')
 
    if (versionParts.size != 3) {
-      throw new IllegalArgumentException("Wrong version format - expected MAJOR.MINOR.PATCH - got ${version}")
+      throw new IllegalArgumentException("Expected format MAJOR.MINOR.PATCH - got ${config.version}")
   }
 
   def major = versionParts[0].toInteger()
