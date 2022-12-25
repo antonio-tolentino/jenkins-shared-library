@@ -1,10 +1,11 @@
 def String call( Map config=[:] ) {
 
-  def pattern = ~/(\d)\.(\d)\.(\d)$/
+  def pattern =~ /^v(\d{1,3})\.(\d{1,3})\.(\d{1,4})$/
 
   def String tt = config.version
   println ("debug = "+tt)
-  return  tt.replaceFirst(pattern) { _,major,minor -> "${major}.${minor}.0"}
+  return  tt.replaceFirst(pattern) { _,major,minor,patch -> "${major}.${minor}.${(patch as int) + 1}"}
+  
 
  
   //switch(config.incType.toUpperCase()) {
