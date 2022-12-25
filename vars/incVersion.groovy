@@ -1,8 +1,8 @@
-def String call(Map config=[:]) {
+def String call( Map config=[:] ) {
 
   def pattern = ~/(\d{1,3})\.(\d{1,3})\.\d{1,4}$/
 
-  
+
 
   switch(map.incType.toUpperCase()) {
     case "MAJOR":
