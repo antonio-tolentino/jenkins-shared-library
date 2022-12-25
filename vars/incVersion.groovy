@@ -1,6 +1,6 @@
 def String call( Map config=[:] ) {
 
-  println ("debug = "config.version)
+  println ("debug = " + config.version)
   def pattern = ~/(\d{1,3})\.(\d{1,3})\.\d{1,4}$/
 
 
