@@ -2,7 +2,7 @@ def String call( Map config=[:] ) {
 
   def pattern = ~/(\d{1,3})\.(\d{1,3})\.\d{1,4}$/
 
-  return  config.version.replaceFirst(pattern) { _,major,minor -> "${major}.${(minor as int) + 1}.0"}
+  return  config.version.replaceFirst(pattern) { _,major,minor -> "${major}.${minor}.0"}
 
  
   //switch(config.incType.toUpperCase()) {
