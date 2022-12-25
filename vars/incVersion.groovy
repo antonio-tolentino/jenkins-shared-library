@@ -1,8 +1,9 @@
 def String call( Map config=[:] ) {
 
-  def pattern = ~/(\d{1,3})\.(\d)\.\d{1,4}$/
+  def pattern = ~/(\d)\.(\d)\.(\d)$/
 
   def String tt = config.version
+  println ("debug = "+tt)
   return  tt.replaceFirst(pattern) { _,major,minor -> "${major}.${minor}.0"}
 
  
