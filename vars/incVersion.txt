@@ -1,9 +1,7 @@
-Increment semantic version:
+# Increment semantic version
 
-<p style="font-size:14px;">
-    <strong>version: </strong> semantic string version (Ex: 1.2.4)
-</p>
 
-<p style="font-size:14px;">
-    <strong>incType: </strong> valid values ("major","minor","patch")
-</p>
+## parameters
+
+* version: semantic string version (Ex: 1.2.4)
+* incType: valid values ("major","minor","patch")
