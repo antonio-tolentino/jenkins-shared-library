@@ -1,0 +1,3 @@
+Increment semantic version 
+String version
+String incType ("major","minor","patch")
