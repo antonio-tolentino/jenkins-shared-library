@@ -2,9 +2,10 @@ def String call( Map config=[:] ) {
 
   def versionParts = config.version.tokenize('.')
 
-   if (versionParts.size != 3) {
-      throw new IllegalArgumentException("Expected format MAJOR.MINOR.PATCH - got ${config.version}")
+  if (versionParts.size != 3) {
+    throw new IllegalArgumentException("Expected version format: MAJOR.MINOR.PATCH - got ${config.version}")
   }
+
 
   def major = versionParts[0].toInteger()
   def minor = versionParts[1].toInteger()
@@ -19,6 +20,7 @@ def String call( Map config=[:] ) {
     case "PATCH":
       return "${major}.${minor}.${patch + 1}"
     default:
+      throw new IllegalArgumentException("Expected incType values: major, minor, patch - got ${config.incType}")
       return config.version
   }
 
